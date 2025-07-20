@@ -1,0 +1,62 @@
+<!--pages/notice/notice.wxml-->
+<view class="container">
+  <!-- 现代化页面头部 -->
+  <view class="page-header fade-in">
+    <view class="header-content">
+      <view class="header-icon">📢</view>
+      <view class="header-text">
+        <view class="title" style="position: relative; left: 75rpx; top: 13rpx">选房通知</view>
+        <view class="subtitle" style="position: relative; left: 54rpx; top: 24rpx">及时获取最新选房动态与重要通知</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 时间线通知列表 -->
+  <view class="timeline-container">
+    <view class="timeline-title">通知时间线</view>
+    
+    <!-- 加载状态 -->
+    <view wx:if="{{loading}}" class="loading-container">
+      <view class="loading-content">
+        <text class="loading-icon">⏳</text>
+        <text class="loading-text">正在加载通知...</text>
+      </view>
+    </view>
+    
+    <!-- 通知列表 -->
+    <view wx:else class="timeline">
+      <view wx:for="{{notices}}" wx:key="id" class="timeline-item fade-in" style="animation-delay: {{(index + 1) * 0.1}}s" bindtap="onNoticeClick" data-id="{{item.id}}">
+        <view class="timeline-marker">
+          <view class="marker-dot {{item.type}}"></view>
+        </view>
+        <view class="timeline-content">
+          <view class="notice-card">
+            <view class="notice-title-row">
+              <view class="notice-title">{{item.title}}</view>
+              <view class="notice-date">{{item.date}}</view>
+            </view>
+            <view class="notice-summary">
+              {{item.summary}}
+            </view>
+            <view class="notice-meta">
+              <view wx:for="{{item.meta}}" wx:for-item="metaItem" wx:key="text" class="meta-item">
+                <text class="meta-icon">{{metaItem.icon}}</text>
+                <text class="meta-text">{{metaItem.text}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部信息 -->
+  <view class="footer">
+    <view class="footer-content" style="width: 650rpx; display: flex; box-sizing: border-box">
+      <view class="footer-logo">🏛️</view>
+      <view class="footer-text">
+        <view class="footer-title">燕山乡安置办</view>
+      </view>
+    </view>
+  </view>
+</view>

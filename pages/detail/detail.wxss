@@ -1,0 +1,447 @@
+/* pages/detail/detail.wxss */
+.container {
+  padding: 24rpx;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+/* 现代化楼栋信息头部 */
+.building-header {
+  position: relative;
+  margin-bottom: 32rpx;
+  border-radius: 24rpx;
+  overflow: hidden;
+  box-shadow: 0 10rpx 15rpx -3rpx rgba(0, 0, 0, 0.1), 0 4rpx 6rpx -2rpx rgba(0, 0, 0, 0.05);
+}
+
+.header-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.header-content {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  padding: 32rpx;
+  gap: 32rpx;
+}
+
+.building-avatar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.building-icon {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 16rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40rpx;
+  box-shadow: 0 4rpx 6rpx -1rpx rgba(0, 0, 0, 0.1), 0 2rpx 4rpx -1rpx rgba(0, 0, 0, 0.06);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 16rpx;
+}
+
+.building-icon::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transform: rotate(45deg);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+.building-badge {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  font-size: 20rpx;
+  font-weight: 600;
+  padding: 4rpx 8rpx;
+  border-radius: 8rpx;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.building-info {
+  flex: 1;
+}
+
+.building-title {
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8rpx;
+  line-height: 1.2;
+}
+
+.building-subtitle {
+  font-size: 26rpx;
+  color: #64748b;
+  margin-bottom: 24rpx;
+  line-height: 1.4;
+}
+
+.building-stats {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+  padding: 16rpx 24rpx;
+  background: rgba(99, 102, 241, 0.1);
+  border-radius: 16rpx;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 4rpx;
+}
+
+.stat-icon {
+  font-size: 24rpx;
+  opacity: 0.8;
+}
+
+.stat-text {
+  font-size: 22rpx;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 24rpx;
+  background: rgba(100, 116, 139, 0.3);
+}
+
+/* 增强的户型图展示 */
+.image-section {
+  margin-bottom: 32rpx;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 24rpx;
+  padding: 32rpx;
+  box-shadow: 0 10rpx 15rpx -3rpx rgba(0, 0, 0, 0.1), 0 4rpx 6rpx -2rpx rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.section-header {
+  margin-bottom: 32rpx;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8rpx;
+}
+
+.section-subtitle {
+  font-size: 24rpx;
+  color: #64748b;
+  opacity: 0.8;
+}
+
+.image-container {
+  margin-bottom: 32rpx;
+}
+
+.image-wrapper {
+  position: relative;
+  border-radius: 16rpx;
+  overflow: hidden;
+  box-shadow: 0 4rpx 6rpx -1rpx rgba(0, 0, 0, 0.1), 0 2rpx 4rpx -1rpx rgba(0, 0, 0, 0.06);
+}
+
+.floorplan-image {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-wrapper:active .image-overlay {
+  opacity: 1;
+}
+
+.overlay-btn {
+  width: 80rpx;
+  height: 80rpx;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4rpx 6rpx -1rpx rgba(0, 0, 0, 0.1), 0 2rpx 4rpx -1rpx rgba(0, 0, 0, 0.06);
+}
+
+.overlay-icon {
+  font-size: 32rpx;
+}
+
+.image-description {
+  margin-top: 24rpx;
+  padding: 24rpx;
+  background: rgba(99, 102, 241, 0.05);
+  border-radius: 16rpx;
+  border-left: 4px solid #6366f1;
+}
+
+.desc-title {
+  font-size: 26rpx;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 8rpx;
+}
+
+.desc-content {
+  font-size: 24rpx;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* 现代化操作按钮 */
+.action-buttons {
+  display: flex;
+  gap: 24rpx;
+  margin-top: 32rpx;
+}
+
+.action-buttons .btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8rpx;
+  font-size: 26rpx;
+}
+
+.btn-icon {
+  font-size: 28rpx;
+}
+
+.btn-text {
+  font-weight: 600;
+}
+
+/* 增强的楼栋特色 */
+.features-section {
+  margin-bottom: 32rpx;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 24rpx;
+  padding: 32rpx;
+  box-shadow: 0 10rpx 15rpx -3rpx rgba(0, 0, 0, 0.1), 0 4rpx 6rpx -2rpx rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24rpx;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32rpx;
+  background: rgba(99, 102, 241, 0.05);
+  border-radius: 16rpx;
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.feature-card:active {
+  transform: translateY(-4rpx);
+  background: rgba(99, 102, 241, 0.1);
+  box-shadow: 0 4rpx 6rpx -1rpx rgba(0, 0, 0, 0.1), 0 2rpx 4rpx -1rpx rgba(0, 0, 0, 0.06);
+}
+
+.feature-icon-wrapper {
+  margin-bottom: 24rpx;
+}
+
+.feature-icon {
+  font-size: 40rpx;
+  width: 80rpx;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border-radius: 16rpx;
+  box-shadow: 0 1rpx 2rpx 0 rgba(0, 0, 0, 0.05);
+}
+
+.feature-content {
+  flex: 1;
+}
+
+.feature-title {
+  font-size: 26rpx;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 8rpx;
+}
+
+.feature-desc {
+  font-size: 22rpx;
+  color: #64748b;
+  opacity: 0.8;
+}
+
+/* 新增房源详情 */
+.details-section {
+  margin-bottom: 32rpx;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 24rpx;
+  padding: 32rpx;
+  box-shadow: 0 10rpx 15rpx -3rpx rgba(0, 0, 0, 0.1), 0 4rpx 6rpx -2rpx rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24rpx;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  padding: 24rpx;
+  background: rgba(99, 102, 241, 0.05);
+  border-radius: 16rpx;
+  border-left: 4px solid #6366f1;
+}
+
+.detail-label {
+  font-size: 22rpx;
+  color: #64748b;
+  margin-bottom: 8rpx;
+  font-weight: 500;
+}
+
+.detail-value {
+  font-size: 26rpx;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* 现代化返回按钮 */
+.back-section {
+  margin-top: 48rpx;
+  text-align: center;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 16rpx;
+  padding: 24rpx 48rpx;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 24rpx;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4rpx 6rpx -1rpx rgba(0, 0, 0, 0.1), 0 2rpx 4rpx -1rpx rgba(0, 0, 0, 0.06);
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #0f172a;
+  transition: all 0.3s ease;
+}
+
+.back-button:active {
+  transform: scale(0.95);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.back-icon {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.back-text {
+  font-weight: 600;
+}
+
+/* 动画效果 */
+.card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.card:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.back-section {
+  animation: fadeIn 0.6s ease-out 0.7s both;
+}
+
+/* 响应式优化 */
+@media (max-width: 750rpx) {
+  .building-header {
+    gap: 24rpx;
+  }
+  
+  .building-icon {
+    width: 100rpx;
+    height: 100rpx;
+    font-size: 40rpx;
+  }
+  
+  .building-title {
+    font-size: 32rpx;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    gap: 16rpx;
+  }
+  
+  .action-btn {
+    padding: 20rpx;
+    font-size: 26rpx;
+  }
+}

@@ -1,0 +1,323 @@
+/* pages/index/index.wxss */
+
+/* 英雄卡片样式 */
+.hero-card {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: white;
+  border-radius: 32rpx;
+  padding: 64rpx;
+  margin-bottom: 48rpx;
+  box-shadow: 0 20rpx 25rpx -5rpx rgba(0, 0, 0, 0.1), 0 10rpx 10rpx -5rpx rgba(0, 0, 0, 0.04);
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 8rpx 24rpx;
+  border-radius: 16rpx;
+  font-size: 24rpx;
+  font-weight: 600;
+  margin-bottom: 24rpx;
+  backdrop-filter: blur(10rpx);
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32rpx;
+  margin-top: 48rpx;
+  padding: 32rpx;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 24rpx;
+  backdrop-filter: blur(20rpx);
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 36rpx;
+  font-weight: 800;
+  margin-bottom: 8rpx;
+}
+
+.stat-label {
+  font-size: 24rpx;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.stat-divider {
+  width: 1rpx;
+  height: 60rpx;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* 图片卡片样式 */
+.image-card {
+  background: white;
+  border-radius: 32rpx;
+  padding: 48rpx;
+  margin-bottom: 48rpx;
+  box-shadow: 0 10rpx 15rpx -3rpx rgba(0, 0, 0, 0.1), 0 4rpx 6rpx -2rpx rgba(0, 0, 0, 0.05);
+  border: 1rpx solid #e2e8f0;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 24rpx;
+  margin-bottom: 48rpx;
+}
+
+.card-icon {
+  width: 80rpx;
+  height: 80rpx;
+  background: linear-gradient(135deg, #6366f1 0%, #818cf8 100%);
+  border-radius: 16rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36rpx;
+  box-shadow: 0 4rpx 6rpx -1rpx rgba(0, 0, 0, 0.1), 0 2rpx 4rpx -1rpx rgba(0, 0, 0, 0.06);
+}
+
+.card-title-group {
+  flex: 1;
+}
+
+.card-subtitle {
+  font-size: 24rpx;
+  color: #64748b;
+  margin-top: 8rpx;
+  font-weight: 500;
+}
+
+.image-container {
+  position: relative;
+  margin-bottom: 32rpx;
+  border-radius: 24rpx;
+  overflow: hidden;
+  margin-left: -32rpx;
+  margin-right: -32rpx;
+}
+
+.main-image {
+  width: 100%;
+  min-height: 500rpx;
+  background: #f1f5f9;
+  transition: all 0.3s ease;
+  border-radius: 24rpx;
+  object-fit: cover;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.image-container:active .image-overlay {
+  opacity: 1;
+}
+
+.overlay-btn {
+  background: rgba(255, 255, 255, 0.9);
+  color: #0f172a;
+  padding: 24rpx 32rpx;
+  border-radius: 16rpx;
+  display: flex;
+  align-items: center;
+  gap: 8rpx;
+  font-weight: 600;
+  backdrop-filter: blur(10rpx);
+  box-shadow: 0 10rpx 15rpx -3rpx rgba(0, 0, 0, 0.1), 0 4rpx 6rpx -2rpx rgba(0, 0, 0, 0.05);
+}
+
+.overlay-icon {
+  font-size: 32rpx;
+}
+
+.image-actions {
+  display: flex;
+  gap: 24rpx;
+  margin-bottom: 32rpx;
+}
+
+.image-actions .btn {
+  flex: 1;
+}
+
+
+
+/* 快速导航样式 */
+.quick-nav {
+  margin-bottom: 48rpx;
+}
+
+.nav-title {
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 32rpx;
+  text-align: center;
+}
+
+.nav-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24rpx;
+}
+
+.nav-item {
+  background: white;
+  border-radius: 24rpx;
+  padding: 48rpx;
+  text-align: center;
+  box-shadow: 0 4rpx 6rpx -1rpx rgba(0, 0, 0, 0.1), 0 2rpx 4rpx -1rpx rgba(0, 0, 0, 0.06);
+  border: 1rpx solid #e2e8f0;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-item:active {
+  transform: translateY(-4rpx);
+  box-shadow: 0 10rpx 15rpx -3rpx rgba(0, 0, 0, 0.1), 0 4rpx 6rpx -2rpx rgba(0, 0, 0, 0.05);
+  border-color: #6366f1;
+}
+
+.nav-icon {
+  width: 80rpx;
+  height: 80rpx;
+  background: linear-gradient(135deg, #6366f1 0%, #818cf8 100%);
+  border-radius: 16rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36rpx;
+  margin: 0 auto 24rpx;
+  box-shadow: 0 4rpx 6rpx -1rpx rgba(0, 0, 0, 0.1), 0 2rpx 4rpx -1rpx rgba(0, 0, 0, 0.06);
+}
+
+.nav-label {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 8rpx;
+}
+
+.nav-desc {
+  font-size: 24rpx;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* 现代化底部样式 */
+.footer {
+  margin-top: 64rpx;
+  padding: 48rpx;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24rpx;
+  background: white;
+  border-radius: 24rpx;
+  padding: 32rpx;
+  box-shadow: 0 1rpx 2rpx rgba(0, 0, 0, 0.05);
+  border: 1rpx solid #e2e8f0;
+}
+
+.footer-logo {
+  font-size: 40rpx;
+  width: 60rpx;
+  height: 60rpx;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  border-radius: 12rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1rpx 2rpx rgba(0, 0, 0, 0.05);
+}
+
+.footer-text {
+  text-align: left;
+}
+
+.footer-title {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 8rpx;
+}
+
+.footer-subtitle {
+  font-size: 24rpx;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* 动画效果 */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40rpx);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 动画延迟 */
+.hero-card {
+  animation-delay: 0.1s;
+}
+
+.image-card {
+  animation-delay: 0.3s;
+}
+
+.quick-nav {
+  animation-delay: 0.5s;
+}
+
+.footer {
+  animation-delay: 0.7s;
+}

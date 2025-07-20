@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/buildings/buildings",
+    "pages/detail/detail",
+    "pages/notice/notice"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#007AFF",
+    "navigationBarTitleText": "徐桥嘉苑户型查看",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f5f7fa"
+  },
+  "tabBar": {
+    "color": "#86868b",
+    "selectedColor": "#007AFF",
+    "backgroundColor": "rgba(255, 255, 255, 0.95)",
+    "borderStyle": "white",
+    "position": "bottom",
+    "height": "120rpx",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "🏘️ 小区平面图"
+      },
+      {
+        "pagePath": "pages/buildings/buildings",
+        "text": "🏢 楼栋户型"
+      },
+      {
+        "pagePath": "pages/notice/notice",
+        "text": "📢 选房通知"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

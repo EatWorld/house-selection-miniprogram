@@ -1,0 +1,78 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+  <!-- 现代化头部卡片 -->
+  <view class="hero-card fade-in">
+    <view class="hero-content">
+      <view class="hero-badge">安置房项目</view>
+      <view class="title-large">徐桥嘉苑（南苑）</view>
+      <view class="hero-stats">
+        <view class="stat-item">
+          <view class="stat-number">10</view>
+          <view class="stat-label">栋楼宇</view>
+        </view>
+        <view class="stat-divider"></view>
+        <view class="stat-item">
+          <view class="stat-number">多种</view>
+          <view class="stat-label">户型</view>
+        </view>
+        <view class="stat-divider"></view>
+        <view class="stat-item">
+          <view class="stat-number">高清</view>
+          <view class="stat-label">图纸</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 小区平面图卡片 -->
+  <view class="image-card fade-in">
+    <view class="card-header">
+      <view class="card-icon">🏘️</view>
+      <view class="card-title-group">
+        <view class="title" style="height: 8rpx; display: block; box-sizing: border-box">小区楼栋布局</view>
+      </view>
+    </view>
+    
+    <view class="image-container">
+      <image 
+        src="{{overviewImage}}" 
+        mode="aspectFit" 
+        class="main-image preview-image"
+        bindtap="previewOverview"
+        lazy-load="{{true}}"
+        show-menu-by-longpress="{{true}}"
+      />
+      <view class="image-overlay">
+        <view class="overlay-btn" bindtap="previewOverview">
+          <text class="overlay-icon">🔍</text>
+          <text>点击放大</text>
+        </view>
+      </view>
+    </view>
+    
+    <view class="image-actions">
+      <button class="btn btn-primary btn-sm" bindtap="previewOverview">
+        <text>🔍</text>
+        <text>放大查看</text>
+      </button>
+      <button class="btn btn-outline btn-sm" bindtap="shareImage">
+        <text>📤</text>
+        <text>分享图片</text>
+      </button>
+    </view>
+    
+    <view class="image-desc text-muted">💡 支持手势缩放、长按保存，获得最佳查看体验</view>
+  </view>
+
+
+
+  <!-- 底部信息 -->
+  <view class="footer">
+    <view class="footer-content">
+      <view class="footer-logo">🏛️</view>
+      <view class="footer-text">
+        <view class="footer-title">燕山乡安置办</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "选房通知",
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#f5f7fa",
+  "backgroundTextStyle": "dark"
+}

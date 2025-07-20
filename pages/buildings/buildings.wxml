@@ -1,0 +1,66 @@
+<!--pages/buildings/buildings.wxml-->
+<view class="container">
+  <!-- 现代化页面头部 -->
+  <view class="page-header fade-in">
+    <view class="header-content">
+      <view class="header-icon">🏢</view>
+      <view class="header-stats">
+        <view class="stat-badge">
+          <text class="stat-number">户型图查看</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 楼栋网格布局 -->
+  <view class="buildings-container">
+    <view class="buildings-grid">
+      <view 
+        wx:for="{{buildings}}" 
+        wx:key="id" 
+        class="building-card fade-in" 
+        style="animation-delay: {{0.1 * (index + 1)}}s"
+        bindtap="viewFloorPlan" 
+        data-building="{{item}}"
+      >
+        <!-- 楼栋卡片头部 -->
+        <view class="card-header">
+          <view class="building-icon" style="background: {{item.color}}">
+            <text class="building-emoji">🏠</text>
+          </view>
+          <view class="building-badge">{{item.type || '住宅楼'}}</view>
+        </view>
+        
+        <!-- 楼栋信息 -->
+        <view class="building-content">
+          <view class="building-name">{{item.name}}</view>
+          <view class="building-details">{{item.details}}</view>
+          
+
+        </view>
+        
+        <!-- 查看按钮 -->
+        <view class="card-footer">
+          <button class="view-btn">
+            <text class="btn-icon">👁️</text>
+            <text>查看户型图</text>
+            <text class="arrow">→</text>
+          </button>
+        </view>
+        
+        <!-- 卡片装饰 -->
+        <view class="card-decoration"></view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部信息 -->
+  <view class="footer">
+    <view class="footer-content">
+      <view class="footer-logo">🏛️</view>
+      <view class="footer-text">
+        <view class="footer-title">燕山乡安置办</view>
+      </view>
+    </view>
+  </view>
+</view>

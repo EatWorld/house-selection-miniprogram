@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 812">
+  <!-- 手机外框 -->
+  <rect width="375" height="812" rx="25" fill="#000" stroke="#333" stroke-width="2"/>
+  
+  <!-- 屏幕区域 -->
+  <rect x="10" y="10" width="355" height="792" rx="20" fill="#f5f5f5"/>
+  
+  <!-- 状态栏 -->
+  <rect x="10" y="10" width="355" height="44" rx="20" fill="#4A90E2"/>
+  <text x="30" y="35" fill="white" font-size="14" font-family="Arial">20:56</text>
+  <text x="320" y="35" fill="white" font-size="12" font-family="Arial">100%</text>
+  <rect x="330" y="25" width="20" height="10" rx="2" fill="white"/>
+  
+  <!-- 标题栏 -->
+  <rect x="10" y="54" width="355" height="50" fill="#4A90E2"/>
+  <text x="187" y="85" fill="white" font-size="16" font-family="Arial" text-anchor="middle">徐桥嘉苑户型查看</text>
+  <circle cx="340" cy="79" r="15" fill="rgba(255,255,255,0.2)"/>
+  <circle cx="310" cy="79" r="8" fill="white"/>
+  
+  <!-- 户型图查看标题 -->
+  <rect x="30" y="130" width="315" height="50" rx="15" fill="linear-gradient(135deg, #667eea 0%, #764ba2 100%)"/>
+  <rect x="45" y="145" width="20" height="20" rx="4" fill="white"/>
+  <text x="187" y="165" fill="white" font-size="16" font-family="Arial" text-anchor="middle">户型图查看</text>
+  
+  <!-- 户型选择网格 -->
+  <!-- 第一行 -->
+  <rect x="30" y="200" width="150" height="120" rx="10" fill="white" stroke="#e0e0e0"/>
+  <rect x="45" y="215" width="30" height="30" rx="8" fill="#FF6B6B"/>
+  <rect x="50" y="220" width="20" height="20" rx="4" fill="white"/>
+  <text x="90" y="235" fill="#333" font-size="12" font-family="Arial">住宅楼</text>
+  <text x="105" y="260" fill="#333" font-size="18" font-family="Arial" font-weight="bold">一号楼</text>
+  <rect x="45" y="275" width="60" height="20" rx="10" fill="#00C851"/>
+  <text x="75" y="288" fill="white" font-size="10" font-family="Arial" text-anchor="middle">90/90/90/90</text>
+  
+  <rect x="195" y="200" width="150" height="120" rx="10" fill="white" stroke="#e0e0e0"/>
+  <rect x="210" y="215" width="30" height="30" rx="8" fill="#17A2B8"/>
+  <rect x="215" y="220" width="20" height="20" rx="4" fill="white"/>
+  <text x="255" y="235" fill="#333" font-size="12" font-family="Arial">住宅楼</text>
+  <text x="270" y="260" fill="#333" font-size="18" font-family="Arial" font-weight="bold">二号楼</text>
+  <rect x="210" y="275" width="60" height="20" rx="10" fill="#00C851"/>
+  <text x="240" y="288" fill="white" font-size="10" font-family="Arial" text-anchor="middle">90/90/90/90</text>
+  
+  <!-- 查看户型图按钮 -->
+  <rect x="45" y="340" width="120" height="35" rx="17" fill="#4A90E2"/>
+  <rect x="55" y="350" width="15" height="15" rx="3" fill="white"/>
+  <text x="105" y="362" fill="white" font-size="12" font-family="Arial" text-anchor="middle">查看户型图</text>
+  
+  <rect x="210" y="340" width="120" height="35" rx="17" fill="#4A90E2"/>
+  <rect x="220" y="350" width="15" height="15" rx="3" fill="white"/>
+  <text x="270" y="362" fill="white" font-size="12" font-family="Arial" text-anchor="middle">查看户型图</text>
+  
+  <!-- 第二行 -->
+  <rect x="30" y="400" width="150" height="120" rx="10" fill="white" stroke="#e0e0e0"/>
+  <rect x="45" y="415" width="30" height="30" rx="8" fill="#17A2B8"/>
+  <rect x="50" y="420" width="20" height="20" rx="4" fill="white"/>
+  <text x="90" y="435" fill="#333" font-size="12" font-family="Arial">住宅楼</text>
+  <text x="105" y="460" fill="#333" font-size="18" font-family="Arial" font-weight="bold">三号楼</text>
+  <rect x="45" y="475" width="60" height="20" rx="10" fill="#00C851"/>
+  <text x="75" y="488" fill="white" font-size="10" font-family="Arial" text-anchor="middle">90/90/90/90</text>
+  
+  <rect x="195" y="400" width="150" height="120" rx="10" fill="white" stroke="#e0e0e0"/>
+  <rect x="210" y="415" width="30" height="30" rx="8" fill="#17A2B8"/>
+  <rect x="215" y="420" width="20" height="20" rx="4" fill="white"/>
+  <text x="255" y="435" fill="#333" font-size="12" font-family="Arial">住宅楼</text>
+  <text x="270" y="460" fill="#333" font-size="18" font-family="Arial" font-weight="bold">四号楼</text>
+  <rect x="210" y="475" width="60" height="20" rx="10" fill="#00C851"/>
+  <text x="240" y="488" fill="white" font-size="10" font-family="Arial" text-anchor="middle">90/90/90/90</text>
+  
+  <!-- 查看户型图按钮 -->
+  <rect x="45" y="540" width="120" height="35" rx="17" fill="#4A90E2"/>
+  <rect x="55" y="550" width="15" height="15" rx="3" fill="white"/>
+  <text x="105" y="562" fill="white" font-size="12" font-family="Arial" text-anchor="middle">查看户型图</text>
+  
+  <rect x="210" y="540" width="120" height="35" rx="17" fill="#4A90E2"/>
+  <rect x="220" y="550" width="15" height="15" rx="3" fill="white"/>
+  <text x="270" y="562" fill="white" font-size="12" font-family="Arial" text-anchor="middle">查看户型图</text>
+  
+  <!-- 第三行（部分显示） -->
+  <rect x="30" y="600" width="150" height="80" rx="10" fill="white" stroke="#e0e0e0"/>
+  <rect x="45" y="615" width="30" height="30" rx="8" fill="#FFC107"/>
+  <rect x="50" y="620" width="20" height="20" rx="4" fill="white"/>
+  <text x="90" y="635" fill="#333" font-size="12" font-family="Arial">住宅楼</text>
+  <text x="105" y="660" fill="#333" font-size="18" font-family="Arial" font-weight="bold">五号楼</text>
+  
+  <rect x="195" y="600" width="150" height="80" rx="10" fill="white" stroke="#e0e0e0"/>
+  <rect x="210" y="615" width="30" height="30" rx="8" fill="#E91E63"/>
+  <rect x="215" y="620" width="20" height="20" rx="4" fill="white"/>
+  <text x="255" y="635" fill="#333" font-size="12" font-family="Arial">住宅楼</text>
+  <text x="270" y="660" fill="#333" font-size="18" font-family="Arial" font-weight="bold">六号楼</text>
+  
+  <!-- 底部导航 -->
+  <rect x="10" y="720" width="355" height="60" fill="white" stroke="#e0e0e0" stroke-width="1"/>
+  
+  <g transform="translate(60, 735)">
+    <rect x="0" y="0" width="24" height="24" rx="4" fill="#ccc"/>
+    <text x="12" y="35" fill="#666" font-size="10" font-family="Arial" text-anchor="middle">小区平面图</text>
+  </g>
+  
+  <g transform="translate(160, 735)">
+    <rect x="0" y="0" width="24" height="24" rx="4" fill="#4A90E2"/>
+    <text x="12" y="35" fill="#4A90E2" font-size="10" font-family="Arial" text-anchor="middle">楼栋户型</text>
+  </g>
+  
+  <g transform="translate(260, 735)">
+    <rect x="0" y="0" width="24" height="24" rx="4" fill="#ccc"/>
+    <text x="12" y="35" fill="#666" font-size="10" font-family="Arial" text-anchor="middle">选房通知</text>
+  </g>
+  
+  <!-- 底部指示器 -->
+  <rect x="150" y="790" width="75" height="4" rx="2" fill="#333"/>
+</svg>

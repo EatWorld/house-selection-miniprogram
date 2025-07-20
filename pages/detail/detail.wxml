@@ -1,0 +1,142 @@
+<!--pages/detail/detail.wxml-->
+<view class="container">
+  <!-- 现代化楼栋信息头部 -->
+  <view class="building-header fade-in">
+    <view class="header-background"></view>
+    <view class="header-content">
+      <view class="building-avatar">
+        <view class="building-icon" style="background-color: {{buildingInfo.color}}">🏠</view>
+        <view class="building-badge">{{buildingInfo.type || 'A型'}}</view>
+      </view>
+      <view class="building-info">
+        <view class="building-title">{{buildingInfo.name}}</view>
+        <view class="building-subtitle">{{buildingInfo.details}}</view>
+        <view class="building-stats">
+          <view class="stat-item">
+            <text class="stat-icon">📐</text>
+            <text class="stat-text">{{buildingInfo.area || '120㎡'}}</text>
+          </view>
+          <view class="stat-divider"></view>
+          <view class="stat-item">
+            <text class="stat-icon">🏠</text>
+            <text class="stat-text">{{buildingInfo.rooms || '3室2厅'}}</text>
+          </view>
+          <view class="stat-divider"></view>
+          <view class="stat-item">
+            <text class="stat-icon">📍</text>
+            <text class="stat-text">{{buildingInfo.floor || '6层'}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 增强的户型图展示 -->
+  <view class="image-section fade-in" style="animation-delay: 0.1s">
+    <view class="section-header">
+      <view class="section-title">户型图详情</view>
+      <view class="section-subtitle">点击图片可放大查看</view>
+    </view>
+    
+    <view class="image-container">
+      <view class="image-wrapper">
+        <image 
+          src="{{buildingInfo.image}}" 
+          mode="widthFix" 
+          class="floorplan-image"
+          bindtap="previewImage"
+          lazy-load="{{true}}"
+          show-menu-by-longpress="{{true}}"
+        />
+        <view class="image-overlay">
+          <view class="overlay-btn" bindtap="previewImage">
+            <text class="overlay-icon">🔍</text>
+          </view>
+        </view>
+      </view>
+      <view class="image-description">
+        <view class="desc-title">户型说明</view>
+        <view class="desc-content">{{buildingInfo.planDescription || '精心设计的户型布局，充分利用每一寸空间'}}</view>
+      </view>
+    </view>
+    
+    <!-- 现代化操作按钮 -->
+    <view class="action-buttons">
+      <button class="btn btn-primary" bindtap="previewImage">
+        <text class="btn-icon">👁️</text>
+        <text class="btn-text">预览大图</text>
+      </button>
+      <button class="btn btn-secondary" bindtap="shareImage">
+        <text class="btn-icon">📤</text>
+        <text class="btn-text">分享好友</text>
+      </button>
+      <button class="btn btn-outline" bindtap="saveImage">
+        <text class="btn-icon">💾</text>
+        <text class="btn-text">保存图片</text>
+      </button>
+    </view>
+  </view>
+
+  <!-- 增强的楼栋特色 -->
+  <view class="features-section fade-in" style="animation-delay: 0.2s" wx:if="{{buildingFeatures.length > 0}}">
+    <view class="section-header">
+      <view class="section-title">楼栋特色</view>
+      <view class="section-subtitle">精心设计的居住体验</view>
+    </view>
+    
+    <view class="features-grid">
+      <view class="feature-card" wx:for="{{buildingFeatures}}" wx:key="index">
+        <view class="feature-icon-wrapper">
+          <view class="feature-icon">{{item.icon}}</view>
+        </view>
+        <view class="feature-content">
+          <view class="feature-title">{{item.title || item.text}}</view>
+          <view class="feature-desc">{{item.description || '优质配置'}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 新增房源详情 -->
+  <view class="details-section fade-in" style="animation-delay: 0.3s">
+    <view class="section-header">
+      <view class="section-title">房源详情</view>
+      <view class="section-subtitle">详细信息一览</view>
+    </view>
+    
+    <view class="details-grid">
+      <view class="detail-item">
+        <view class="detail-label">建筑面积</view>
+        <view class="detail-value">{{buildingInfo.area || '120㎡'}}</view>
+      </view>
+      <view class="detail-item">
+        <view class="detail-label">户型结构</view>
+        <view class="detail-value">{{buildingInfo.rooms || '3室2厅2卫'}}</view>
+      </view>
+      <view class="detail-item">
+        <view class="detail-label">楼层信息</view>
+        <view class="detail-value">{{buildingInfo.floor || '共6层'}}</view>
+      </view>
+      <view class="detail-item">
+        <view class="detail-label">朝向方位</view>
+        <view class="detail-value">{{buildingInfo.direction || '南北通透'}}</view>
+      </view>
+      <view class="detail-item">
+        <view class="detail-label">装修状况</view>
+        <view class="detail-value">{{buildingInfo.decoration || '毛坯房'}}</view>
+      </view>
+      <view class="detail-item">
+        <view class="detail-label">交房时间</view>
+        <view class="detail-value">{{buildingInfo.deliveryTime || '2025年底'}}</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 现代化返回按钮 -->
+  <view class="back-section fade-in" style="animation-delay: 0.4s">
+    <button class="back-button" bindtap="goBack">
+      <text class="back-icon">←</text>
+      <text class="back-text">返回楼栋列表</text>
+    </button>
+  </view>
+</view>
